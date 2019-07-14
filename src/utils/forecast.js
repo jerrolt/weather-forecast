@@ -9,8 +9,9 @@ const forecast = (lat, lon, callback) => {
             callback(`Unable to connect to Darksky weather services.`, undefined)
         } else if(body.error) {
             callback(`${body.code} - ${body.error}`, undefined)
-        } else {            
-            callback(undefined, `${body.daily.data[0].summary} It's currently ${body.currently.temperature} degrees with a ${body.currently.precipProbability}% chance of rain.`)
+        } else {           
+            const overview = `${body.daily.data[0].summary} It's currently ${body.currently.temperature} degrees with a ${body.currently.precipProbability}% chance of rain. Temperature high reaching ${body.daily.data[0].temperatureHigh} degrees and low of ${body.daily.data[0].temperatureLow}`
+            callback(undefined, overview)
         }
     })
 }
