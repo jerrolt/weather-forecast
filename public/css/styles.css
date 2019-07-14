@@ -1,0 +1,95 @@
+body {
+    color: #333333;
+    font-family: arial;
+    max-width: 650px;
+    margin: 0 auto;
+    padding:0 16px;
+
+    display: flex; /* viewport (page) will auto adjust */
+    flex-direction: column; /* items will align top to bottom(vertically) */
+    min-height: 100vh; /* 100vh == 100% of the viewport height (page height) */
+}
+
+/* more for flexible page and a sticky footer */
+.main {
+    flex-grow: 1; /* content will use all leftover space - in this case everything above the footer*/
+}
+
+header {
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+header h1 {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+header a {
+    color: #888888;
+    margin-right: 16px;
+    text-decoration: none;
+    padding: 2px;
+    border-radius: 2px;
+}
+header a:hover{
+    text-decoration: underline;
+    background: #c2c2c2;
+    color: #fff;
+}
+
+img.portrait {
+    width: 250px;
+    border-radius: 5px;
+}
+
+footer {
+    color: #888888;
+    border-top: 1px solid #eeeeee;
+    margin-top: 16px;
+    padding:16px 0;
+
+}
+
+input {
+    border: 1px solid #cccccc;
+    padding: 8px;
+}
+button {
+    cursor: pointer;
+    border: 1px solid #888888;
+    background: #888888;
+    color: white;
+    padding: 8px;
+}
+/* body {
+    padding:0;
+}
+body > div {
+    margin: 0;
+    padding: 0;
+}
+div.pg_top_nav {
+    background-color: white;
+    z-index: 2;
+    width: 100%;
+    margin-top: -10px;
+    padding:5px;
+    text-align: center;
+    position: fixed;
+}
+div.pg_body{
+    padding:100px 20px 20px 20px;
+    margin: 0;
+    opacity: 0.8;
+}
+div.pg_footer{
+    clear:both;
+    padding:10px 20px;
+}
+h1, span {
+    color: grey;
+}
+
+img {
+    opacity: 0.2;
+    min-width: 100%;
+} */
