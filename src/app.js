@@ -7,6 +7,7 @@ const forecast = require('./utils/forecast.js')
 
 //Express server
 const app = express()
+const port = process.env.PORT || 3000
 
 // Express: Set-up root and template directory paths
 const publicDir = path.join(__dirname, `../public`)     //public assets
@@ -104,7 +105,7 @@ app.get('*', (req, res) => {
     })
 })
 
-//start express server on port 3000
-app.listen(3000, () => {
+//start express server on port 3000 if not heroku
+app.listen(port, () => {
     console.log('Server running on port 3000')
 })
